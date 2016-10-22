@@ -127,8 +127,8 @@
 				</div>
 				
 				<div id="langWrapper">
-					<div id="btn_tw_wrapper"><div><a href="landing_hk.html">中文</a></div></div>
-					<div id="btn_en_wrapper"><div><a href="landing_en.html">ENG</a></div></div>
+					<div id="btn_tw_wrapper"><div><a id="btn_lang_tw" href="#">中文</a></div></div>
+					<div id="btn_en_wrapper"><div><a id="btn_lang_en" href="#">ENG</a></div></div>
 				</div>
 			  
             </div>
@@ -168,8 +168,10 @@
 		
         <script type="text/javascript" src="cordova.js"></script>
 		
-		
+		<!--
 		<script src="js/jquery.js"></script>
+		-->
+		
         <script type="text/javascript" src="js/index.js"></script>
 		
 		
@@ -187,10 +189,62 @@
         </script>
 		
 		<script type="text/javascript">
+		
+			//initial
+			var _lang_set = "hk";
+		
+		
 			//F7
 			
 			// Initialize app Framework7
-			var myApp = new Framework7();
+			var myApp = new Framework7({
+				template7Pages: true, //enable Template7 rendering for pages
+				
+				//Specify templates/pages data
+				template7Data: {
+					'url:about.html': {
+						name: 'John Doe',
+						age: 38,
+						company: 'Apple',
+						position: 'Developer'
+					},
+					
+					// Plain data object
+					'languages': {
+						'landing': [
+							{
+								signup:'註冊',
+								login: '登入',
+								naviback: '上一頁',
+								pagetitle: '多語 & page2 測試'
+							},
+							{
+								signup:'SignUP',
+								login: 'Login',
+								naviback: 'Back',
+								pagetitle: 'Locale & page2 Test'
+							},
+						],
+						'morepagesexample': [
+							{
+								name: 'PHP',
+								description: 'Server-side scripting language designed for web development but also used as a general-purpose programming language...'
+							},
+							{
+								name: 'Ruby',
+								description: 'Dynamic, reflective, object-oriented, general-purpose programming language...'
+							}
+						]
+					}
+					
+				}
+				
+			});
+			
+			
+			
+			
+			
 			 
 			// If we need to use custom DOM library, let's save it to $$ variable:
 			var $$ = Dom7;
@@ -206,6 +260,29 @@
 			
 			//Hide Navi
 			mainView.hideNavbar();
+			
+			$$("#btn_lang_tw").on('click', function () {
+				_lang_set = "hk";
+				//alert(_lang_set);
+				
+				mainView.router.load({
+					url: 'landing.html',
+					context: Template7.data.languages.landing[0] 
+				})
+				
+				
+			});
+			
+			$$("#btn_lang_en").on('click', function () {
+				_lang_set = "en";
+				//alert(_lang_set);
+				
+				mainView.router.load({
+					url: 'landing.html',
+					context: Template7.data.languages.landing[1]
+				})
+				
+			});
 			
 			
         </script>
