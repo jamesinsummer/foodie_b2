@@ -478,10 +478,9 @@
 						
 						
 					},
-                    function (response) { 
-						
-						alert(JSON.stringify(response)) 
-						
+                   function (errorlogin) { 
+						alert(JSON.stringify(errorlogin)) 
+						console.log("Error : " + JSON.stringify(errorlogin));
 					});
 			
 			
