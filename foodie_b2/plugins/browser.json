@@ -65,12 +65,12 @@
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.fd.foody"
         },
-        "cordova-plugin-social-message": {
-            "PACKAGE_NAME": "com.fd.foody"
-        },
         "cordova-plugin-facebook4": {
             "APP_ID": "1283819655023973",
             "APP_NAME": "11 Foody",
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.fd.foody"
         }
     },

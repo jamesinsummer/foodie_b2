@@ -629,12 +629,42 @@ $$(document).on('pageInit', '.page[data-page="blog"]', function (e) {
 		//Facebook does not permit you to share pre-filled text on Android, however images and urls will work.
 		//不可以放圖片 image: "http://cordova.apache.org/images/cordova_bot.png",  不會跑
 		//可以出現 text 跟 link (but FB 只有 link)
+		//uk.co.ilee.socialmessage Phonegap Build 不支援
+		/*
 		var message = {
 			text: "",
 			url: $_blog_share_link
 		};
 		window.socialmessage.send(message);
+		*/
 		
+		
+		// this is the complete list of currently supported params you can pass to the plugin (all optional) 
+			/*
+			var options = {
+			  message: 'share this', // not supported on some apps (Facebook, Instagram) 
+			  subject: 'the subject', // fi. for email 
+			  files: ['', ''], // an array of filenames either locally or remotely 
+			  url: 'https://www.website.com/foo/#bar?a=b',
+			  chooserTitle: 'Pick an app' // Android only, you can override the default share sheet title 
+			}
+			*/
+			
+			
+			var options = {
+			  url: $_blog_share_link
+			}
+			 
+			var onSuccess = function(result) {
+			  console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true 
+			  console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false) 
+			}
+			 
+			var onError = function(msg) {
+			  console.log("Sharing failed with message: " + msg);
+			}
+			 
+			window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
 		
 		
 	});

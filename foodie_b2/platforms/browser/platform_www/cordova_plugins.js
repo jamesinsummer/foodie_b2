@@ -606,19 +606,19 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-social-message/www/socialmessage.js",
-        "id": "cordova-plugin-social-message.SocialMessage",
-        "pluginId": "cordova-plugin-social-message",
-        "clobbers": [
-            "socialmessage"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-facebook4/www/facebook-browser.js",
         "id": "cordova-plugin-facebook4.FacebookConnectPluginBrowser",
         "pluginId": "cordova-plugin-facebook4",
         "clobbers": [
             "facebookConnectPlugin"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "pluginId": "cordova-plugin-x-socialsharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
         ]
     }
 ];
@@ -646,8 +646,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.2.1",
     "cordova-plugin-splashscreen": "3.2.2",
     "cordova-plugin-vibration": "2.1.2",
-    "cordova-plugin-social-message": "0.4.0",
-    "cordova-plugin-facebook4": "1.7.4"
+    "cordova-plugin-facebook4": "1.7.4",
+    "cordova-plugin-x-socialsharing": "5.1.3"
 }
 // BOTTOM OF METADATA
 });
