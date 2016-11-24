@@ -7,9 +7,79 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "XXXXXXX",
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-social-message": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1283819655023973",
+            "APP_NAME": "11 Foody",
+            "PACKAGE_NAME": "com.fd.foody"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.fd.foody"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.fd.foody"
+        }
+    }
 }
